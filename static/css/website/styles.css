@@ -1,0 +1,124 @@
+/* Global */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f2f2f2;
+}
+
+body  h1 {
+	font-family: 'Indie Flower', cursive;
+	font-family: 'Rampart One', cursive;
+}
+
+body  div {
+	font-family: 'Indie Flower', cursive;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.global-wrapper {
+	max-width: 90%;
+	margin: 1em auto;
+}
+
+
+/* Navbar */
+.navbar-brand {
+	font-size: 2rem;
+	font-family: 'Indie Flower', cursive;
+	font-family: 'Rampart One', cursive;
+}
+
+.nav-link {
+	font-family: 'Indie Flower', cursive;
+	font-size: 1.5rem;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-transform: uppercase;
+}
+
+.nav-search-bar {
+	border-radius: 60px;
+	border:  2px solid black;
+	outline: none;
+	margin-right: -35px;
+}
+
+.nav-search-button {
+	background-color: black;
+	border: none;
+	border-radius: 60px;
+	color: white;
+	cursor: pointer;
+	font-weight: 700;
+	outline: none;
+}
+
+
+/* Index */
+.index-start {
+	background: url('../../assets/toylib_fun.jpg') no-repeat;
+	background-size: cover;
+	height: 150vh;
+}
+
+.index-start h1 {
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+.index-start p {
+	font-size: 1.5rem;
+}
+
+.index-prices-titles {
+	font-size: 2rem;
+}
+
+
+/* Filter */
+.filter-div {
+	background-color: #333333;
+	color: white;
+	position: sticky;
+	top: 6em;
+}
+
+.filter-checkboxes {
+	position: relative;
+	margin-left: 25%;
+}
+
+
+/* Buttons */
+.common-buttons {
+	background-color: black;
+	border-radius: 60px;
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+	height: 45px;
+	width: 35%;
+}
+
+.red-buttons {
+	background-color: red;
+}
+
+.common-buttons:focus, .nav-search-button:focus {
+	outline: none;
+}
+
+
+/* Cards */
+.cards {
+	background-color: #f2f2f2;
+}
+
+.cards-games-names {
+	font-size: 1.5rem;
+}

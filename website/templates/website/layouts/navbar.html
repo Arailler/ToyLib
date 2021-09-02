@@ -1,0 +1,99 @@
+{% load i18n %}
+{% load static %}
+
+<nav class="navbar sticky-top navbar-expand-xl navbar-dark bg-primary">
+  
+  <div class="container-fluid">
+    
+    <a class="navbar-brand" href="{% url 'index' %}">
+      
+      <div class="d-flex justify-content-center align-items-center">
+        
+        <div><img src="{% static 'assets/logo_small.jpg' %}" height="65"></div>
+        
+        <p class="navbar-brand mx-2">ToyLib</p>
+      
+      </div>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav m-auto text-center">
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">{% trans "Home" %}</a>
+        </li>
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'game_list' %}">{% trans "Game list" %}</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'about'%}">{% trans "About" %}</a>
+        </li>
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+        </li>
+      
+      </ul>
+
+     <form class="d-flex" method="GET" action="{% url 'search'%}">
+
+        {% if not research or research == "&default"%}
+          
+          <input class="form-control px-2 nav-search-bar" type="search" name="research" placeholder="&#128270" aria-label="Search">
+        
+        {% else %}
+          
+          <input class="form-control px-2 nav-search-bar" type="search" name="research" value={{research}}  placeholder="&#128270" aria-label="Search">
+        
+        {% endif %}
+        
+        <button class="px-4 nav-search-button" type="submit">{% trans "Search" %}</button>
+      
+      </form>
+
+      {% if user_login is None %}
+        
+        <div class="ml-2">
+          
+          <ul class="navbar-nav text-center">
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'log_in' %}">{% trans "Log in" %}</a>
+            </li>
+              
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'sign_up' %}">{% trans "Sign up" %} </a>
+            </li>
+          
+          </ul>
+        
+        </div>
+      
+      {% else %}
+   
+        <a class="mx-4" href="{% url 'user_profile' user_login %}">
+          
+          <div class="d-flex flex-column justify-content-center align-items-center border border-white px-3 py-2">
+            
+            <div><img src="{% static 'assets/user_icon.png' %}" height="50"></div>
+            
+            <div class="text-white">{{ user_login }}</div>
+          
+          </div>      
+        
+        </a>
+          
+      {% endif %}
+      
+    </div>
+  
+  </div>
+
+</nav>

@@ -1,0 +1,158 @@
+{% extends 'website/layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %} 
+	
+	<div class="card">
+		<div class="card-body">
+			
+			<section>
+				
+				<h1 class="mb-4">{{ game.game_name }}</h1>
+
+				<div class="row d-flex justify-content-center align-items-center">
+					<div class="col-lg-2 text-center">
+						
+						<p><strong>{% trans "Type" %} :</strong> {% trans game.game_type %}</p>
+
+						{% if game.game_player_number_min == game.game_player_number_max %}
+							
+							<p>
+								<strong>{% trans "Player number" %} :</strong> {{ game.game_player_number_min }}
+							</p>
+						
+						{% elif game.game_player_number_max == 100 %}
+							
+							<p>
+								<strong>{% trans "Player number" %} :</strong> {{ game.game_player_number_min }}+
+							</p>
+						
+						{% else %}
+							
+							<p>
+								<strong>{% trans "Player number" %} :</strong> {{ game.game_player_number_min }}-{{ game.game_player_number_max }}
+							</p>
+						
+						{% endif%}						
+					
+						{% if game.game_age_min == game.game_age_max %}
+							
+							<p>
+								<strong>{% trans "Age classification" %} :</strong> {{ game.game_age_min }}
+							</p>
+						
+						{% elif game.game_age_max == 100 %}
+							
+							<p>
+								<strong>{% trans "Age classification" %} :</strong> {{ game.game_age_min }}+
+							</p>
+						
+						{% else %}
+							
+							<p>
+								<strong>{% trans "Age classification" %} :</strong> {{ game.game_age_min }}-{{ game.game_age_max }}
+							</p>
+						
+						{% endif%}
+						
+						{% if game.game_contains_mature_content %}
+							
+							<p>
+								<strong>{% trans "Mature content" %} :</strong>
+								<span>{% trans 'Yes' %}</span>
+							</p>
+						
+						{% else %}
+							
+							<p>
+								<strong>{% trans "Mature content" %} :</strong>
+								<span>{% trans 'No' %}</span>
+							</p>
+						
+						{% endif %}
+					
+					</div>
+
+					<div class="col-lg-2 text-center">
+						
+						<p>
+							<strong>{% trans "Available in stock" %} :</strong> {{ game.game_number_in_stock }}
+						</p>
+
+						<p>
+							<strong>{% trans "Consultation count" %} :</strong> {{ game.game_number_times_consulted }}
+						</p>
+						
+						<p>
+							<strong>{% trans "Borrowing count" %} :</strong> {{ game.game_number_times_borrowed }}
+						</p>
+						
+						<p>
+							<strong>{% trans "Your borrowing count" %} :</strong> {{ user_borrowing_count }}
+						</p>
+					
+					</div>
+
+					<div class="col-lg-8 text-center">
+						
+						<img class="mw-100" src="{% static game.game_image_path %}">
+					
+					</div>
+				
+				</div>	
+
+				<div class="row">
+					<div class="col-lg-12 text-center my-5">
+						
+						<p>
+							{% if language_code == 'es' %}
+								<strong>{% trans "Description" %} :</strong> {{ game.game_description_es }}
+							{% elif language_code == 'fr' %}
+								<strong>{% trans "Description" %} :</strong> {{ game.game_description_fr }}
+							{% elif language_code == 'de' %}
+								<strong>{% trans "Description" %} :</strong> {{ game.game_description_de }}
+							{% elif language_code == 'pt-BR' %}
+								<strong>{% trans "Description" %} :</strong> {{ game.game_description_pt }}
+							{% else %}
+								<strong>{% trans "Description" %} :</strong> {{ game.game_description_en }}
+							{% endif %}
+						</p>
+					
+					</div>
+				</div>
+
+				<div class="row d-flex justify-content-center align-items-center">
+					
+					{% if user_login is not None and game.game_number_in_stock > 0 %}
+						
+						<div class="col-lg-6 text-center">
+							
+							<a href="{% url 'borrow_game' game.id %}">
+								<button type="button" class="btn-xl common-buttons">
+									<strong>{% trans "Borrow this game" %}</strong>
+								</button>
+							</a>
+						
+						</div>
+					
+					{% endif %}
+
+					<div class="col-lg-6 my-3 text-center">
+						
+						<a href="{% url 'game_list' %}">
+							<button type="button" class="btn-xl w-50 common-buttons red-buttons">
+								<strong>{% trans "BACK TO ALL GAMES" %}</strong>
+							</button>
+						</a>
+					
+					</div>
+				
+				</div>
+			
+			</section>
+		
+		</div>
+	</div>
+		
+{% endblock %}

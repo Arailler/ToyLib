@@ -1,0 +1,118 @@
+{% extends 'website/layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+	{% if game_number > 1 %}
+		
+		<h1 class="mb-4">{{ game_number }} {% trans "games available" %} :</h1>
+	
+	{% elif game_number == 1 %}
+		
+		<h1 class="mb-4">{{ game_number }} {% trans "game available" %} :</h1>
+	
+	{% endif %}
+		
+	<div class="row">
+		
+		<div class="col-lg-3">
+			<div class="card filter-div">
+				
+				<div class="card-body">
+					{% include 'website/layouts/filter.html' %}
+				</div>
+			
+			</div>
+		</div>
+		
+		<div class="col-lg-9">
+			<div class="card">
+				<div class="card-body">
+					
+					<section class="d-flex flex-wrap justify-content-center align-items-center">
+						{% for game in game_list %}
+							
+							<div class="col-lg-3 text-center my-1">
+								<div class="card border">
+									<div class="card-body">
+										<a class="cards-games-names"href="{% url 'game_sheet' game.id %}">
+											{{ game.game_name }}
+										</a>
+										
+										<div class="my-3">
+											<a href="{% url 'game_sheet' game.id %}">
+												<img class="mw-100"src="{% static game.game_image_path %}">
+											</a>
+										</div>
+
+										<p>
+											<time datetime="{{ game.created_at|date:'Y-m-d' }}">
+												{% trans "Posted" %} {{ game.created_at|timesince }} {% trans "ago" %}
+											</time>
+										</p>
+									
+									</div>
+								</div>
+							</div>
+							
+						{% empty %}
+							
+							<p>{% trans "Sorry, no game available to display" %}...</p>
+						
+						{% endfor %}
+					
+					</section>
+				
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+	<ul class="text-center d-flex justify-content-center align-items-center my-4 list-unstyled">
+		
+		{% if game_list.has_previous %}
+			
+			{% if not research or research == "&default"%}
+				
+				<li class="mx-4"><a href="?{{ getURL }}&page=1">{% trans 'First' %}</a></li>
+				<li class="mx-4"><a href="?{{ getURL }}&page={{ game_list.previous_page_number }}">{% trans 'Previous' %}</a></li>
+			
+			{% else %}
+				
+				<li class="mx-4"><a href="?research={{ research }}&page=1">{% trans 'First' %}</a></li>
+				<li class="mx-4"><a href="?research={{ research }}&page={{ game_list.previous_page_number }}">{% trans 'Previous' %}</a></li>
+			
+			{% endif %}
+		
+		{% endif %}
+
+		{% if game_list.paginator.num_pages > 1 %}
+			
+			<li>{% trans 'Page' %} {{ game_list.number }} {% trans 'of' %} {{ game_list.paginator.num_pages }}</li>
+		
+		{% endif %}
+
+		{% if game_list.has_next %}
+			
+			{% if not research or research == "&default"%}
+				
+				<li class="mx-4"><a href="?{{ getURL }}&page={{ game_list.next_page_number }}">{% trans 'Next' %}</a></li>
+				<li class="mx-4"><a href="?{{ getURL }}&page={{ game_list.paginator.num_pages }}">{% trans 'Last' %}</a></li>
+			
+			{% else %}
+				
+				<li class="mx-4"><a href="?research={{ research }}&page={{ game_list.next_page_number }}">{% trans 'Next' %}
+				</a>
+				</li>
+				
+				<li class="mx-4"><a href="?research={{ research }}&page={{ game_list.paginator.num_pages }}">{% trans 'Last' %}</a></li>
+			
+			{% endif %}
+		
+		{% endif %}
+	
+	</ul>
+	
+{% endblock %}

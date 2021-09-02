@@ -1,0 +1,26 @@
+{% extends 'website/layouts/base.html' %}
+{% load i18n %}
+
+{% block content %}
+		
+	<h1 class="mb-4">{% trans "Welcome" %}</h1>
+	
+	<form method="POST" action="{% url 'sign_up' %}">
+		
+		{% csrf_token %}
+
+		<div>
+			
+			<div>
+				{{ form.as_p }}
+			</div>
+			
+			<div class="text-center">
+				<button type="submit" class="common-buttons">{% trans "Sign up" %}</button>
+			</div>
+		
+		</div>
+	
+	</form>
+	
+{% endblock %}

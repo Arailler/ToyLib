@@ -1,0 +1,562 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-08 17:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\website\forms.py:34
+msgid "Your first name"
+msgstr "Ihr Vorname"
+
+#: .\website\forms.py:37
+msgid "Your first name..."
+msgstr "Ihr Vorname..."
+
+#: .\website\forms.py:42
+msgid "Your last name"
+msgstr "Ihr Nachname"
+
+#: .\website\forms.py:45
+msgid "Your last name..."
+msgstr "Ihr Nachname..."
+
+#: .\website\forms.py:50
+msgid "Your phone number"
+msgstr "Ihre Telefonnummer"
+
+#: .\website\forms.py:53
+msgid "Your phone number..."
+msgstr "Ihre Telefonnummer..."
+
+#: .\website\forms.py:58
+msgid "Your email adress (*)"
+msgstr "Ihre E-Mail Adresse (*)"
+
+#: .\website\forms.py:66
+msgid "Your message subject (*)"
+msgstr "Der Betreff Ihrer Nachricht (*)"
+
+#: .\website\forms.py:69
+msgid "Your message subject..."
+msgstr "Der Betreff Ihrer Nachricht..."
+
+#: .\website\forms.py:74
+msgid "Your message (*)"
+msgstr "Ihre Nachricht (*)"
+
+#: .\website\forms.py:77
+msgid "Your message..."
+msgstr "Ihre Nachricht..."
+
+#: .\website\forms.py:138
+#: .\website\forms.py:196
+msgid "Your user login"
+msgstr "Ihr Spitzname"
+
+#: .\website\forms.py:141
+#: .\website\forms.py:199
+msgid "Your user login..."
+msgstr "Ihr Spitzname..."
+
+#: .\website\forms.py:146
+#: .\website\forms.py:204
+msgid "Your password"
+msgstr "Ihr Kennwort"
+
+#: .\website\forms.py:149
+#: .\website\forms.py:207
+msgid "Your password..."
+msgstr "Ihr Kennwort..."
+
+#: .\website\forms.py:171
+msgid "The login or the password is wrong."
+msgstr "Der Benutzername oder das Kennwort ist falsch."
+
+#: .\website\forms.py:181
+msgid "Your birth date"
+msgstr "Ihr Geburtsdatum"
+
+#: .\website\forms.py:183
+msgid "Your birth date..."
+msgstr "Ihr Geburtsdatum..."
+
+#: .\website\forms.py:61
+#: .\website\forms.py:188
+msgid "Your email adress"
+msgstr "Ihre E-Mail Adresse"
+
+#: .\website\forms.py:191
+msgid "Your email adress..."
+msgstr "Ihre E-Mail Adresse..."
+
+#: .\website\forms.py:76
+msgid "Age"
+msgstr "Alter"
+
+#: .\website\forms.py:79
+msgid "What age ?"
+msgstr "Wie alt ?"
+
+#: .\website\forms.py:96
+msgid "How many players ?"
+msgstr "Wie viele Spiele ?"
+
+#: .\website\forms.py:109
+msgid "Age not valid."
+msgstr "Ungültiges Alter."
+
+#: .\website\forms.py:130
+msgid "Player number not valid."
+msgstr "Ungültige Anzahl von Spielern."
+
+#: .\website\forms.py:212
+msgid "Your password (again)"
+msgstr "Ihr Kennwort (wieder)"
+
+#: .\website\forms.py:215
+msgid "Your password... (again)"
+msgstr "Ihr Kennwort... (wieder)"
+
+#: .\website\forms.py:223
+msgid "This email adress is already used."
+msgstr "Diese E-Mail-Adresse wird bereits verwendet."
+
+#: .\website\forms.py:231
+msgid "This login is already used."
+msgstr "Dieser Spitzname wird bereits verwendet"
+
+#: .\website\forms.py:240
+msgid "The password is not identical in each field."
+msgstr "Das Kennwort ist in den beiden Feldern nicht gleich."
+
+#: .\website\templates\website\404.html:8
+msgid "Where the heck am I ?"
+msgstr "Wo bin ich?"
+
+#: .\website\templates\website\404.html:12
+msgid "You seem to be lost."
+msgstr "Sie scheinen verloren zu sein"
+
+#: .\website\templates\website\500.html:12
+msgid "An error occured with the server."
+msgstr "Beim Server ist ein Fehler aufgetreten."
+
+#: .\website\templates\website\layouts\filter.html:19
+msgid "Game type"
+msgstr "Spiel Typ"
+
+#: .\website\templates\website\layouts\filter.html:43
+msgid "Board game"
+msgstr "Brettspiel"
+
+#: .\website\templates\website\layouts\filter.html:66
+msgid "Card game"
+msgstr "Kartenspiel"
+
+#: .\website\templates\website\layouts\filter.html:90
+msgid "Construction game"
+msgstr "Konstruktionsspiel"
+
+#: .\website\templates\website\layouts\filter.html:114
+msgid "Puzzle game"
+msgstr "Puzzle"
+
+#: .\website\templates\website\layouts\filter.html:138
+msgid "Toy"
+msgstr "Spielzeug"
+
+#: .\website\templates\website\layouts\filter.html:162
+msgid "Video game"
+msgstr "Videospiel"
+
+#: .\website\templates\website\layouts\filter.html:168
+msgid "Filter"
+msgstr "Filter"
+
+#: .\website\templates\website\layouts\filter.html:168
+msgid "Display filters"
+msgstr "Filter anzeigen"
+
+#: .\website\templates\website\layouts\footer.html:5
+msgid "All rights reserved"
+msgstr "Alle Rechte vorbehalten"
+
+#: .\website\templates\website\layouts\navbar.html:24
+msgid "Game list"
+msgstr "Liste der Spiele"
+
+#: .\website\templates\website\layouts\navbar.html:30
+msgid "About"
+msgstr "Über"
+
+#: .\website\templates\website\layouts\navbar.html:36
+msgid "Contact"
+msgstr "Kontakt"
+
+#: .\website\templates\website\layouts\navbar.html:60
+#: .\website\templates\website\pages\log_in.html:21
+msgid "Log in"
+msgstr "Einloggen"
+
+#: .\website\templates\website\layouts\navbar.html:66
+msgid "Sign up"
+msgstr "Jetzt registrieren"
+
+#: .\website\templates\website\pages\about.html:7
+msgid "Who the heck are we ?"
+msgstr "Wer sind wir ?"
+
+#: .\website\templates\website\pages\about.html:15
+msgid "Welcome to ToyLib, your number one place to borrow games online !"
+msgstr "Willkommen bei ToyLib, dem besten Ort, um Spiele online auszuleihen!"
+
+#: .\website\templates\website\pages\about.html:21
+msgid ""
+"Founded in 2018, ToyLib has come a long way from its beginnings in Saint-"
+"Etienne-Du-Rouvray. When Kevin Maouchi first started out, his passion for "
+"world conquest drove him to do tons of development so that ToyLib can offer "
+"you 'the world's most advanced toylibrary website'. We now serve customers "
+"all over the world, and are thrilled that we're able to turn our passion "
+"into our own website."
+msgstr ""
+"ToyLib wurde 2018 gegründet und hat seit seinen Anfängen in Saint-Etienne-Du-Rouvray einen langen Weg zurückgelegt."
+"Als Kévin Maouchi anfing, führte ihn seine Leidenschaft, die Welt zu erobern"
+"Tonnenweise Entwicklung zu leisten, damit ToyLib Ihnen 'die fortschrittlichste Spielebibliothek der Welt' bieten kann. Wir bedienen jetzt unsere Kunden auf der ganzen Welt und uns selbst."
+"Wir freuen uns, unsere Leidenschaft über unsere Seite weitergeben zu können."
+
+#: .\website\templates\website\pages\about.html:27
+msgid ""
+"We hope you enjoy our available games as much as we enjoy offering them to "
+"you. If you have any questions or comments, please don't hesitate to contact "
+"us."
+msgstr ""
+"Wir hoffen, dass Ihnen unsere verfügbaren Spiele genauso viel Spaß machen wie uns."
+"Ich freue mich, sie Ihnen anbieten zu können. Wenn Sie Fragen oder Anmerkungen haben, zögern Sie nicht"
+"um uns zu kontaktieren."
+
+#: .\website\templates\website\pages\about.html:33
+msgid "Sincerely,"
+msgstr "Grüße,"
+
+#: .\website\templates\website\pages\about.html:39
+msgid "ToyLib staff"
+msgstr "ToyLib-Mitarbeiter"
+
+#: .\website\templates\website\pages\contact.html:8
+msgid "Thanks ! We will get back to you soon."
+msgstr "Vielen Dank ! Wir werden uns sehr bald bei Ihnen melden."
+
+#: .\website\templates\website\pages\contact.html:12
+msgid "Feeling like contacting us ?"
+msgstr "Sie möchten uns kontaktieren?"
+
+#: .\website\templates\website\pages\contact.html:22
+msgid "required field"
+msgstr "Benötigte Felder"
+
+#: .\website\templates\website\pages\contact.html:25
+msgid "Submit"
+msgstr "Senden"
+
+#: .\website\templates\website\pages\game_list.html:9
+msgid "games available"
+msgstr "verfügbare Spiele"
+
+#: .\website\templates\website\pages\game_list.html:13
+msgid "game available"
+msgstr "verfügbar Spiel"
+
+#: .\website\templates\website\pages\game_list.html:49
+msgid "Posted"
+msgstr "Gepostet vor"
+
+#: .\website\templates\website\pages\game_list.html:49
+#: .\website\templates\website\pages\user_profile.html:27
+#: .\website\templates\website\pages\user_profile.html:121
+msgid "ago"
+msgstr " "
+
+#: .\website\templates\website\pages\game_list.html:57
+msgid "Sorry, no game available to display"
+msgstr "Es gibt leider kein Spiel zum Anzeigen"
+
+#: .\website\templates\website\pages\game_list.html:66
+msgid "First"
+msgstr "Anfang"
+
+#: .\website\templates\website\pages\game_list.html:67
+msgid "Previous"
+msgstr "Bisherige"
+
+#: .\website\templates\website\pages\game_list.html:70
+msgid "Page"
+msgstr "Seite"
+
+#: .\website\templates\website\pages\game_list.html:70
+msgid "of"
+msgstr "von"
+
+#: .\website\templates\website\pages\game_list.html:73
+msgid "Next"
+msgstr "Nächstes"
+
+#: .\website\templates\website\pages\game_list.html:74
+msgid "Last"
+msgstr "Ende"
+
+#: .\website\templates\website\pages\game_sheet.html:19
+msgid "Type"
+msgstr "Art"
+
+#: .\website\templates\website\pages\game_sheet.html:49
+msgid "Yes"
+msgstr "Ja"
+
+#: .\website\templates\website\pages\game_sheet.html:54
+msgid "No"
+msgstr "Nein"
+
+#: .\website\forms.py:93
+#: .\website\templates\website\pages\game_sheet.html:25
+#: .\website\templates\website\pages\game_sheet.html:33
+#: .\website\templates\website\pages\game_sheet.html:41
+msgid "Player number"
+msgstr "Spielerzahlen"
+
+#: .\website\templates\website\pages\game_sheet.html:52
+#: .\website\templates\website\pages\game_sheet.html:60
+#: .\website\templates\website\pages\game_sheet.html:68
+msgid "Age classification"
+msgstr "Alterseinstufung"
+
+#: .\website\templates\website\pages\game_sheet.html:78
+#: .\website\templates\website\pages\game_sheet.html:87
+msgid "Mature content"
+msgstr "Inhalte für Erwachsene"
+
+#: .\website\templates\website\pages\game_sheet.html:100
+msgid "Available in stock"
+msgstr "Auf Lager"
+
+#: .\website\templates\website\pages\game_sheet.html:106
+msgid "Consultation count"
+msgstr "Beratungkonto"
+
+#: .\website\templates\website\pages\game_sheet.html:111
+msgid "Borrowing count"
+msgstr "Kreditkonto"
+
+#: .\website\templates\website\pages\game_sheet.html:117
+msgid "Your borrowing count"
+msgstr "Ihr Kreditkonto"
+
+#: .\website\templates\website\pages\game_sheet.html:139
+msgid "Borrow this game"
+msgstr "Dieses Spiel ausleihen"
+
+#: .\website\templates\website\pages\game_sheet.html:151
+msgid "Description"
+msgstr "Beschreibung"
+
+#: .\website\templates\website\pages\game_sheet.html:164
+msgid "BACK TO ALL GAMES"
+msgstr "ZURÜCK ZU ALLEN SPIELEN"
+
+#: .\website\templates\website\pages\index.html:7
+msgid "ToyLib, where the fun is the norm"
+msgstr "ToyLib, wo Spaß die Norm ist"
+
+#: .\website\templates\website\pages\index.html:17
+msgid "Borrow games - Play, Return, Repeat !"
+msgstr "Spiele ausleihen - Spielen, zurückkehren, neu beginnen !"
+
+#: .\website\templates\website\pages\index.html:18
+msgid "Just $12.99/month (Special 60%% OFF)"
+msgstr "Nur 11,50€/monat (60% Sonderaktion)"
+
+#: .\website\templates\website\pages\index.html:18
+msgid "Get started"
+msgstr "Anfangen"
+
+#: .\website\templates\website\pages\index.html:23
+msgid "How does it work ?"
+msgstr "Wie es funktioniert ?"
+
+#: .\website\templates\website\pages\index.html:30
+msgid "Pick"
+msgstr "Wähle"
+
+#: .\website\templates\website\pages\index.html:31
+msgid "From 100+ games"
+msgstr "Unter mehr als 100 Spielen"
+
+#: .\website\templates\website\pages\index.html:39
+msgid "Enjoy"
+msgstr "Genieße"
+
+#: .\website\templates\website\pages\index.html:40
+msgid "As long as you want"
+msgstr "So lange, wie du willst"
+
+#: .\website\templates\website\pages\index.html:49
+msgid "Return and repeat"
+msgstr "Gib das Spiel zurück und fang von vorne an"
+
+#: .\website\templates\website\pages\index.html:50
+msgid "Free shipping, easy cancellation"
+msgstr "Kostenloser Versand, einfache Stornierung"
+
+#: .\website\templates\website\pages\index.html:56
+msgid "Testimonials"
+msgstr "Referenzen"
+
+#: .\website\templates\website\pages\index.html:67
+msgid "Awesome ! - Michael G."
+msgstr "Beeindruckend ! - Michael G."
+
+#: .\website\templates\website\pages\index.html:78
+msgid "Amazing ! - Darya O."
+msgstr "Nicht zu glauben ! - Darya O."
+
+#: .\website\templates\website\pages\index.html:89
+msgid "Great ! - Patrick C. & Marie J."
+msgstr "Genial ! - Patrick C. & Marie J."
+
+#: .\website\templates\website\pages\index.html:95
+msgid "Pricing"
+msgstr "Preis"
+
+#: .\website\templates\website\pages\index.html:101
+msgid "Package"
+msgstr "Package"
+
+#: .\website\templates\website\pages\index.html:103
+msgid "Price/month"
+msgstr "Preis/monat"
+
+#: .\website\templates\website\pages\index.html:104
+msgid "Pay today"
+msgstr "Bezahlen heute"
+
+#: .\website\templates\website\pages\index.html:110
+msgid "Noob"
+msgstr "Noob"
+
+#: .\website\templates\website\pages\index.html:111
+msgid "1 month"
+msgstr "1 monat"
+
+#: .\website\templates\website\pages\index.html:112
+msgid "$29.99/month"
+msgstr "25,50€/monat"
+
+#: .\website\templates\website\pages\index.html:113
+msgid "or $29.99 today"
+msgstr "oder 25,50€ heute"
+
+#: .\website\templates\website\pages\index.html:119
+msgid "Gamer"
+msgstr "Gamer"
+
+#: .\website\templates\website\pages\index.html:120
+msgid "3 months"
+msgstr "3 monate"
+
+#: .\website\templates\website\pages\index.html:121
+msgid "$19.99/month"
+msgstr "17,00€/monat"
+
+#: .\website\templates\website\pages\index.html:122
+msgid "or $59.99 today"
+msgstr "oder 51,00€ heute"
+
+#: .\website\templates\website\pages\index.html:128
+msgid "Hardcore gamer"
+msgstr "Hardcore gamer"
+
+#: .\website\templates\website\pages\index.html:129
+msgid "12 months"
+msgstr "12 monate"
+
+#: .\website\templates\website\pages\index.html:130
+msgid "$12.99/month"
+msgstr "11,50€/monat"
+
+#: .\website\templates\website\pages\index.html:131
+msgid "or $149.99 today"
+msgstr "oder 127,50€ heute"
+
+#: .\website\templates\website\pages\index.html:131
+msgid "Select"
+msgstr "Wählen "
+
+#: .\website\templates\website\pages\log_in.html:6
+msgid "Welcome back"
+msgstr "Willkommen zurück"
+
+#: .\website\templates\website\pages\sign_up.html:6
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: .\website\templates\website\pages\user_profile.html:9
+msgid "Your account"
+msgstr "Ihr Konto"
+
+#: .\website\templates\website\pages\user_profile.html:15
+msgid "Login"
+msgstr "Pseudo"
+
+#: .\website\templates\website\pages\user_profile.html:21
+msgid "Email address"
+msgstr "E-Mail-Adresse"
+
+#: .\website\templates\website\pages\user_profile.html:27
+msgid "Account created"
+msgstr "Konto erstellt vor"
+
+#: .\website\templates\website\pages\user_profile.html:33
+msgid "You are"
+msgstr "Sie sind"
+
+#: .\website\templates\website\pages\user_profile.html:41
+msgid "Log out"
+msgstr "Ausloggen"
+
+#: .\website\templates\website\pages\user_profile.html:47
+msgid "Your current borrowings"
+msgstr "Ihre aktuellen Kredite"
+
+#: .\website\templates\website\pages\user_profile.html:77
+msgid "Deadline"
+msgstr "Rückflugdatum"
+
+#: .\website\templates\website\pages\user_profile.html:85
+#: .\website\templates\website\pages\user_profile.html:129
+msgid "No game to display"
+msgstr "Keine Spiele zum Anzeigen"
+
+#: .\website\templates\website\pages\user_profile.html:91
+msgid "All your borrowings"
+msgstr "Alle ihre Kredite"
+
+#: .\website\templates\website\pages\user_profile.html:77
+msgid "Borrowed"
+msgstr "Ausgeliehen vor"
+
+#: .\website\templates\website\pages\user_profile.html:139
+msgid "DELETE PROFILE"
+msgstr "PROFIL LÖSCHEN"

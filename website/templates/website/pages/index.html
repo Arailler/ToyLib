@@ -1,0 +1,178 @@
+{% extends 'website/layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+	<div class="index-start d-flex flex-column justify-content-around">
+			<div class="row" >
+				<div class="col-lg-7 text-center">
+					
+					<h1>{% trans "ToyLib, where the fun is the norm" %}</h1>
+					
+					<p class="pt-4">{% trans "Borrow games - Play, Return, Repeat !" %}</p>
+					
+					<p>{% trans "Just $12.99/month (Special 60% OFF)" %}</p>
+					
+					<button class="common-buttons w-50 mt-4 px-4">{% trans "Get started" %}</button>
+				
+				</div>
+			</div>
+			<div class="row">
+			</div>
+	</div>
+
+	<h1 class="index-titles text-center my-3">{% trans "How does it work ?" %}</h1>
+
+	<div class="row d-flex justify-content-around align-items-center">
+		<div class="col-lg-3 text-center">
+			<div class="card border-0 cards">
+				
+				<div class="card-body">
+					
+					<img class="img-fluid" src="{% static 'assets/step1.png' %}">
+				
+				</div>
+				
+				<h5><b>{% trans "Pick" %}</b></h5>
+				
+				<h6>{% trans "From 100+ games" %}</h6>
+			
+			</div>
+		</div>
+		
+		<div class="col-lg-3 text-center">
+			<div class="card border-0 cards">
+				
+				<div class="card-body">
+
+					<img class="img-fluid" src="{% static 'assets/step2.png' %}">
+				
+				</div>
+				
+				<h5><b>{% trans "Enjoy" %}</b></h5>
+				
+				<h6>{% trans "As long as you want" %}</h6>
+			
+			</div>
+		</div>
+		
+		<div class="col-lg-3 text-center">
+			<div class="card border-0 cards">
+				
+				<div class="card-body">
+					<img class="img-fluid" src="{% static 'assets/step3.png' %}">
+				</div>
+
+				<h5><b>{% trans "Return and repeat" %}</b></h5>
+				
+				<h6>{% trans "Free shipping, easy cancellation" %}</h6>
+			</div>
+		</div>
+	</div>
+	
+	<h1 class="index-titles text-center my-3">{% trans "Testimonials" %}</h1>
+
+	<div class="row d-flex justify-content-around align-items-center">
+		<div class="col-lg-3 text-center">
+			<div class="card">
+				
+				<div class="card-body">
+					
+					<img class="img-fluid" src="{% static 'assets/testimonial_kid.jpg' %}">
+				
+				</div>
+				
+				<h6 class="index-testimonials">{% trans "Awesome ! - Michael G." %}</h6>
+			
+			</div>
+		</div>
+		
+		<div class="col-lg-3 text-center">
+			<div class="card">
+				
+				<div class="card-body">
+					
+					<img class="img-fluid" src="{% static 'assets/testimonial_ado.jpg' %}">
+				
+				</div>
+				
+				<h6 class="index-testimonials">{% trans "Amazing ! - Darya O." %}</h6>
+			
+			</div>
+		</div>
+		
+		<div class="col-lg-3 text-center">
+			<div class="card">
+				
+				<div class="card-body">
+					
+					<img class="img-fluid" src="{% static 'assets/testimonial_senior.jpg' %}">
+				
+				</div>
+				
+				<h6 class="index-testimonials">{% trans "Great ! - Patrick C. & Marie J." %}</h6>
+			
+			</div>
+		</div>
+	</div>
+	
+	<h1 class="index-titles text-center my-3">{% trans "Pricing" %}</h1>
+
+	<div class="row justify-content-center align-items-center border-dark">
+		<div class="col-lg-4 text-center">
+			<div class="card bg-primary text-white">
+				<div class="card-body">
+					
+					<div class="index-prices-titles mb-4"><b>{% trans "Noob" %}</b></div>
+					
+					<div class="my-2"><b>{% trans "1 month" %}</b></div>
+					
+					<div class="my-2">{% trans "$29.99/month" %}</div>
+					
+					<div class="my-2">{% trans "or $29.99 today" %}</div>
+					
+					<button class="btn-sm common-buttons mt-4">{% trans "Select" %}</button>
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-4 text-center">
+			<div class="card border-dark">
+				<div class="card-body">
+
+					<div class="index-prices-titles mb-4"><b>{% trans "Gamer" %}</b></div>
+					
+					<div class="my-2"><b>{% trans "3 months" %}</b></div>
+					
+					<div class="my-2">{% trans "$19.99/month" %}</div>
+					
+					<div class="my-2">{% trans "or $59.99 today" %}</div>
+					
+					<button class="btn-sm common-buttons mt-4">{% trans "Select" %}</button>
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-4 text-center">
+			<div class="card bg-primary text-white border-dark">
+				<div class="card-body">
+
+					<div class="index-prices-titles mb-4"><b>{% trans "Hardcore gamer" %}</b></div>
+					
+					<div class="my-2"><b>{% trans "12 months" %}</b></div>
+					
+					<div class="my-2">{% trans "$12.99/month" %}</div>
+					
+					<div class="my-2">{% trans "or $149.99 today" %}</div>
+					
+					<button class="btn-sm common-buttons mt-4">{% trans "Select" %}</button>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

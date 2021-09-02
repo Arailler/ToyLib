@@ -1,0 +1,176 @@
+{% load i18n %}
+
+<div>
+	
+	<form method="GET" action="{% url 'filter' %}">
+		
+		<div>
+			
+			<div>
+				{{ form.as_p }}
+			</div>
+
+	  		<div>
+	  			
+	  			<label>{% trans "Game type" %} :</label>
+
+				<div class="filter-checkboxes">
+
+					<div>
+						
+						{% if active_game_type_list is None %}
+							
+							<input class="mx-10" type="checkbox" name="Board game" checked>
+						
+						{% else %}
+							
+							{% if 'Board game' in active_game_type_list %}
+		  						
+		  						<input type="checkbox" name="Board game" checked>
+		  					
+		  					{% else %}
+		  						
+		  						<input type="checkbox" name="Board game">
+		  					
+		  					{% endif %}
+						
+						{% endif %}
+
+						<label>{% trans "Board game" %}</label>
+					
+					</div>
+					
+					<div>
+						
+						{% if active_game_type_list is None %}
+							
+							<input type="checkbox" name="Card game" checked>
+						
+						{% else %}
+							
+							{% if 'Card game' in active_game_type_list %}
+		  						
+		  						<input type="checkbox" name="Card game" checked>
+		  					
+		  					{% else %}
+		  						
+		  						<input type="checkbox" name="Card game">
+		  					
+		  					{% endif %}
+						
+						{% endif %}
+
+						<label>{% trans "Card game" %}</label>
+					
+					</div>
+			  		
+					<div>
+						
+						{% if active_game_type_list is None %}
+							
+							<input type="checkbox" name="Construction game" checked>
+						
+						{% else %}
+							
+							{% if 'Construction game' in active_game_type_list %}
+		  						
+		  						<input type="checkbox" name="Construction game" checked>
+		  					
+		  					{% else %}
+		  						
+		  						<input type="checkbox" name="Construction game">
+		  					
+		  					{% endif %}
+						
+						{% endif %}
+						
+						<label>{% trans "Construction game" %}</label>
+					
+					</div>
+			  		
+					<div>
+						
+						{% if active_game_type_list is None %}
+							
+							<input type="checkbox" name="Puzzle game" checked>
+						
+						{% else %}
+							
+							{% if 'Puzzle game' in active_game_type_list %}
+		  						
+		  						<input type="checkbox" name="Puzzle game" checked>
+		  					
+		  					{% else %}
+		  						
+		  						<input type="checkbox" name="Puzzle game">
+		  					
+		  					{% endif %}
+						
+						{% endif %}
+						
+						<label>{% trans "Puzzle game" %}</label>
+					
+					</div>
+			  		
+					<div>
+
+						{% if active_game_type_list is None %}
+							
+							<input type="checkbox" name="Toy" checked>
+						
+						{% else %}
+							
+							{% if 'Toy' in active_game_type_list %}
+		  						
+		  						<input type="checkbox" name="Toy" checked>
+		  					
+		  					{% else %}
+		  						
+		  						<input type="checkbox" name="Toy">
+		  					
+		  					{% endif %}
+						
+						{% endif %}
+						
+						<label>{% trans "Toy" %}</label>
+					
+					</div>
+
+			  		<div>
+			  			
+			  			{% if active_game_type_list is None %}
+							
+							<input type="checkbox" name="Video game" checked>
+						
+						{% else %}
+							
+							{% if 'Video game' in active_game_type_list %}
+		  						
+		  						<input type="checkbox" name="Video game" checked>
+		  					
+		  					{% else %}
+		  						
+		  						<input type="checkbox" name="Video game">
+		  					
+		  					{% endif %}
+						
+						{% endif %}
+						
+						<label>{% trans "Video game" %}</label>
+			  		</div>
+		  		
+		  		</div>
+			
+			</div>
+			
+			<div class="row text-center">
+				<div class="col-lg-12 text-center"> 
+					<button class="btn btn-primary btn-lg mt-3" type="submit">{% trans "Filter" %} </button>
+				</div>
+			</div>
+		
+		</div>
+	
+	</form>
+
+</div>

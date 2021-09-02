@@ -1,0 +1,13 @@
+{% extends 'website/layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+	<h1 class="text-center my-4">Oops ! I did it again...</h1>
+
+	<div class="d-flex justify-content-center align-items-center"><img src="{% static 'assets/error500.gif' %}"></div>
+
+	<p class="text-center mt-4">{% trans "An error occured with the server." %}</p>
+	
+{% endblock %}

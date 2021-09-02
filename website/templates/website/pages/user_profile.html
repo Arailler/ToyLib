@@ -1,0 +1,143 @@
+{% extends 'website/layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+		
+	<h1 class="mb-4">{% trans "Your account" %} :</h1>
+
+	<div class="row d-flex justify-content-center align-items-center">
+		<div class="col-lg-6 text-center">
+			
+			<p>
+				{% trans "Login" %} : {{ user.user_login }}
+			</p>
+
+			<p>
+				{% trans "Email address" %} : {{ user.user_email_adress }}
+			</p>
+
+			<p>
+				{% trans "Account created" %} {{ user.created_at|timesince }} {% trans "ago" %}
+			</p>
+
+			<p>
+				{% trans "You are" %} {{ user.user_birth_date|timesince }}
+			</p>
+		
+		</div>
+
+		<div class="col-lg-6 text-center">
+			
+			<div>
+				<a href="{% url 'deconnect_user' %}">
+					<button type="button" class="btn-xl common-buttons">
+						<strong>{% trans "Log out" %}</strong>
+					</button>
+				</a>
+			</div>
+			
+			<div class="my-3">
+				<a href="{% url 'delete_user' %}">
+					<button type="button" class="btn-xl common-buttons red-buttons">
+						<strong>{% trans "DELETE PROFILE" %}</strong>
+					</button>
+				</a>
+			</div>
+		
+		</div>
+	</div>
+
+	<h1 class="my-4">{% trans "Your current borrowings" %} :</h1>
+
+	<div class="col-lg-12">
+		<div class="card">
+			<div class="card-body">
+				
+				<section class="d-flex flex-wrap justify-content-center align-items-center">
+					
+					{% for game, borrowing in current_borrowed_games_list %}
+						
+						<div class="col-lg-3 text-center my-1">
+							<div class="card border">
+								<div class="card-body">
+									
+									<a class="cards-game-list-games-names"href="{% url 'game_sheet' game.id %}">
+											{{ game.game_name }}
+									</a>
+
+									<div class="my-3">
+										<a href="{% url 'game_sheet' game.id %}">
+											<img class="mw-100" src="{% static game.game_image_path %}">
+										</a>
+									</div>
+							
+									<p>
+										<time datetime="{{ game.created_at|date:'Y-m-d' }}">
+											{% trans "Deadline" %} : {{ borrowing.borrowing_deadline }}
+										</time>
+									</p>
+								
+								</div>
+							</div>
+						</div>
+					
+					{% empty %}
+						
+						<p>{% trans "No game to display" %}...</p>
+					
+					{% endfor %}
+				
+				</section>
+			
+			</div>
+		</div>
+	</div>
+
+	<h1 class="my-4">{% trans "All your borrowings" %} : </h1>
+
+	<div class="col-lg-12">
+		<div class="card">
+			<div class="card-body">
+				
+				<section class="d-flex flex-wrap justify-content-center align-items-center">
+					
+					{% for game, borrowing in all_borrowed_games_list %}
+						
+						<div class="col-lg-3 text-center my-1">
+							<div class="card border">
+								<div class="card-body">
+									
+									<a class="cards-game-list-games-names"href="{% url 'game_sheet' game.id %}">
+											{{ game.game_name }}
+									</a>
+
+									<div class="my-3">
+										<a href="{% url 'game_sheet' game.id %}">
+											<img class="mw-100" src="{% static game.game_image_path %}">
+										</a>
+									</div>
+									
+									<p>
+										<time datetime="{{ game.created_at|date:'Y-m-d' }}">
+											{% trans "Borrowed" %} {{ borrowing.created_at|timesince }} {% trans "ago" %} 
+										</time>
+									</p>
+								
+								</div>
+							</div>
+						</div>
+					
+					{% empty %}
+						
+						<p>{% trans "No game to display" %}...</p>
+					
+					{% endfor %}
+				
+				</section>
+
+			</div>
+		</div>
+	</div>
+		
+{% endblock %}
